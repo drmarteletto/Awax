@@ -7,6 +7,7 @@
 ul, li{
     text-decoration: none;
     list-style: none;
+    text-align: center;
 }
 
 body{
@@ -61,6 +62,10 @@ footer{
     flex: 1;
     display: flex;
     justify-content: flex-end;
+}
+
+.menu-opener{
+    display: none;
 }
 
 .menu ul,
@@ -368,6 +373,7 @@ footer{
 }
 
 .section-team .sliders{
+    display: inline-flex;
     width: 100vw;
     height: 100%;
 }
@@ -459,15 +465,17 @@ footer{
 .section-clients{
     width: 200vw;
     height: 100%;
-    display: flex;
+    display: inline-flex;
+}
+
+.section-clients-area{
+    overflow-x: hidden;
 }
 
 .section-client{
-    overflow: hidden;
-    width: 1140px;
+    max-width: 1140px;
     padding-left: 205px;
     padding-right: 205px;
-    max-width: 1140px;
     flex-wrap: wrap;
 }
 
@@ -574,19 +582,32 @@ footer{
 }
 
 .section-premium{
-    max-width: 100vh;
+    max-width: 1140px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     margin-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .section-premium--left{
     margin-right: 100px;
+    width: 400px;
+}
+
+.section-premium--left img{
+   width: 100%;
+   margin: 10px;
+}
+
+.section-premium--right{
+    width: 450px;
 }
 
 .section-premium--right--allcontent{
+    width: 400px;
     margin-bottom: 30px;
 }
 
@@ -607,8 +628,7 @@ footer{
 }
 
 .section-premium--right--content{
-    width: 435px;
-    margin-left: 64px;
+    width: 100%;
     text-align: left;
 }
 
@@ -624,7 +644,6 @@ footer{
 }
 
 .section-fact{
-    flex: 1;
     text-align: center;
     padding: 15px;
 }
@@ -678,14 +697,18 @@ footer{
 }
 
 .social-itens--img.two{
-    background-color: #127bb4;
+    background-color: #34c5f1;
 }
 
 .social-itens--img.three{
-    background-color: #336298;
+    background-color: #127bb4;
 }
 
 .social-itens--img.four{
+    background-color: #336298;
+}
+
+.social-itens--img.five{
     background-color: #b61b29;
 }
 
@@ -731,13 +754,12 @@ footer{
     background-image: url('../media/mapa.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .section-map--area{
-    width: 1140px;
+    margin-left: 30px;
     margin: auto;
 }
 
@@ -745,7 +767,6 @@ footer{
     width: 50%;
     padding: 30px;
     background-color: #FFF;
-    color: #000;
 }
 
 .section-map--item{
@@ -776,9 +797,7 @@ footer{
     max-width: 1140px;
     margin: auto;
     display: flex;
-    flex-direction: row;
     color: #FFF;
-    flex-wrap: wrap;
 }
 
 .footer-social{
@@ -876,4 +895,365 @@ footer{
     color: #FFF;
     text-decoration: none;
     font-size: 30px;
+}
+
+
+
+@media (min-width:450px) and (max-width:800px){
+
+
+    .logo{
+        margin-left: 30px;
+    }
+
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: -555px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .menu li a{
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+
+    .menu li.active a{
+        border: 0;
+        color: #B28756;
+    }
+
+    .section-aboutus{
+        flex-direction: column;
+    }
+
+    .section-aboutus--left{
+        margin: 30px;
+    }
+
+    .section-aboutus--right{
+        width: auto;
+    }
+    
+    .section-services{
+        flex-wrap: wrap;
+    }
+
+    .section-service{
+        min-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .section-team{
+        max-width: 510px;
+    }
+
+    .section-premium{
+        flex-direction: column;
+    }
+
+    .section-premium--left{
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .section-premium--right{
+        margin-right: 0;
+    }
+
+    .section-facts{
+        max-width: 510px;
+        margin: auto;
+        flex-wrap: wrap;
+
+    }
+
+    .section-fact{
+        width: 250px;
+    }
+
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-map--area{
+        margin-left: 0;
+        width: auto;
+    }
+
+    .section-map--info{
+        width: auto;
+    }
+
+    .section-map--item{
+        margin-bottom: 20px;
+    }
+
+    .section-map--item:last-child{
+        margin-bottom: 0px;
+    }
+
+    .footer-area{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-text{
+        display: none;
+    }
+
+    .footer-social{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .social-icons{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-text{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-subscribe{
+        margin-bottom: 20px;
+    }
+
+    .go-home{
+        display: none;
+    }
+}
+
+@media (max-width:450px){
+
+    .logo{
+        margin-left: 30px;
+    }
+
+    .menu-opener{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .menu li a{
+        font-weight: bold;
+        height: 70px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+
+    .menu li.active a{
+        border: 0;
+        color: #B28756;
+    }
+
+    .banner h1{
+        font-size: 30px;
+    }
+
+    .banner h2{
+        font-size: 17px;
+    }
+
+    .section-aboutus{
+        flex-direction: column;
+    }
+
+    .section-aboutus--left{
+        margin: 30px;
+    }
+
+    .section-aboutus--right{
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .section-aboutus--right img{
+        width: 100%;
+    }
+    
+    .section-services{
+        flex-wrap: wrap;
+    }
+
+    .section-service{
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-team{
+        max-width: 250px;
+    }
+
+    .section-projects--filters{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .section-projects--photo{
+        width: 320px;
+        height: 190px;
+    }
+
+    .section-projects--photoarea{
+        width: 300px;
+    }
+
+    .section-premium{
+        flex-direction: column;
+    }
+
+    .section-client{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-wrap: nowrap;
+    }
+
+    .section-price--pack{
+        margin-right: 0;
+    }
+
+    .section-premium--left{
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .section-premium--left img{
+        width: 250px;
+    }
+
+    .section-premium--right{
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-premium--right--content{
+        width: auto;
+    }
+
+    .section-facts{
+        max-width: 330px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    .section-fact{
+        width: 330px;
+    }
+
+    .social-itens{
+        flex-direction: column;
+    }
+
+    .social-itens--img{
+        margin-left: 10px;
+    }
+
+    .social-icons{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-text{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-contact--form--formulario{
+        width: 300px;
+    }
+
+    .section-contact--form--formulario label{
+        flex-direction: column;
+    }
+
+    .section-map{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .section-map--area{
+        width: auto;
+    }
+
+    .section-map--info{
+        width: auto;
+    }
+
+    .section-map--item{
+        margin-bottom: 20px;
+    }
+
+    .section-map--item:last-child{
+        margin-bottom: 0px;
+    }
+
+    footer{
+        height: 100%;
+    }
+
+    .footer-area{
+        flex-direction: column;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .footer-social{
+        width: auto;
+        margin-right: 0;
+    }
+
+    .footer-text{
+        display: none;
+    }
+
+    .footer-subscribe{
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .go-home{
+        display: none;
+    }
 }
